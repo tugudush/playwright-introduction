@@ -8,5 +8,8 @@ test("Intro heading has correct text", async ({ page }) => {
     name: "IntroductionDirect link to",
   });
 
+  const title = await page.title();
+  console.log(title);
+
   await expect(heading).toHaveText("Introduction");
 });
